@@ -9,12 +9,12 @@
 	const { toggleSidebar }: Props = $props();
 </script>
 
-<section class="flex h-full justify-center bg-[#1c1347] px-1 py-4">
+<section class="flex h-full justify-center bg-[#1c1347] px-1 py-2">
 	<Button
 		onclick={() => toggleSidebar()}
 		class="h-0 w-0 p-4 text-[#ff2592]/80 hover:text-[#ff2592]"
 		variant="ghost"
 	>
-		<Files class="!h-5 !w-5 " />
+		<Files class="!h-6 !w-6" />
 	</Button>
 </section>

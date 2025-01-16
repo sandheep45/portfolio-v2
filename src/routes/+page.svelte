@@ -3,6 +3,7 @@
 	import MenuBar from '$lib/components/layouts/portfolio-layout/menu-bar.svelte';
 	import StatusBar from '$lib/components/layouts/portfolio-layout/status-bar.svelte';
 	import * as Resizable from '$lib/components/ui/resizable/index';
+	import * as TreeView from '$lib/components/ui/tree-view';
 
 	let showSidebar = $state(true);
 
@@ -24,7 +25,18 @@
 		<Resizable.PaneGroup class="h-full bg-[#030d22]" direction="horizontal">
 			{#if showSidebar}
 				<Resizable.Pane defaultSize={1 / 7} order={1}>
-					<div class="h-full">ach</div>
+					<div class="h-full">
+						<TreeView.Root>
+							<TreeView.Folder name="src">
+								<TreeView.Folder name="routes">
+									<TreeView.File name="+layout.svelte" />
+									<TreeView.File name="+page.svelte" />
+								</TreeView.Folder>
+								<TreeView.File name="app.css" />
+								<TreeView.File name="hooks.server.ts" />
+							</TreeView.Folder>
+						</TreeView.Root>
+					</div>
 				</Resizable.Pane>
 			{/if}
 			<Resizable.Handle />
