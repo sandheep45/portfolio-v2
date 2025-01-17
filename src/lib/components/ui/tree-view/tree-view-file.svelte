@@ -12,7 +12,11 @@
 	let { name, icon, type = 'button', class: className, children, ...rest }: Props = $props();
 </script>
 
-<button {type} class={cn('flex place-items-center gap-1 pl-[3px]', className)} {...rest}>
+<button
+	{type}
+	class={cn('flex place-items-center gap-1 py-0.5 pl-[3px] text-sm', className)}
+	{...rest}
+>
 	{#if icon}
 		{@render icon({ name })}
 	{:else if children}

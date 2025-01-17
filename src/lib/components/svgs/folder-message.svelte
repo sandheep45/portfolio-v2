@@ -7,7 +7,7 @@
 	let props: SvgProps = $props();
 </script>
 
-<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 100 100" {...props}>
+<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" {...props}>
 	<path
 		d="M14.1 14.419V18.464C14.1 19.245 14.733 19.879 15.514 19.879H22.586C23.367 19.879 24 19.245 24 18.464V14.419L19.791 17.009C19.337 17.289 18.763 17.289 18.309 17.009L14.1 14.419Z"
 		fill="#F87171"
