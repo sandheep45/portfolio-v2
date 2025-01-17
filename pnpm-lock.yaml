@@ -17,6 +17,9 @@ importers:
       mode-watcher:
         specifier: ^0.5.0
         version: 0.5.0(svelte@5.18.0)
+      svelte-vertical-timeline:
+        specifier: ^2.0.0
+        version: 2.0.0(svelte@5.18.0)
     devDependencies:
       '@eslint/compat':
         specifier: ^1.2.3
@@ -1512,6 +1515,11 @@ packages:
     peerDependencies:
       svelte: ^5.0.0
 
+  svelte-vertical-timeline@2.0.0:
+    resolution: {integrity: sha512-I2Lb+J23mhG8Vf4dLi/qXEo3hVBG2+xilCXpGazMPze8Dhdwad0W+EqxRDvXmlkEdF5HdI+nizO5bNVRe+IgYA==}
+    peerDependencies:
+      svelte: ^5.0.0
+
   svelte@5.18.0:
     resolution: {integrity: sha512-/Eb81lB8bVUxQPmkPVNBYrU9cZ544+9hE91ZUUXTMf7eWcGW84N1hS3gvv/XsUNOWLLg3IicXP2qa8W3KpTUHA==}
     engines: {node: '>=18'}
@@ -2929,6 +2937,10 @@ snapshots:
       clsx: 2.1.1
       runed: 0.20.0(svelte@5.18.0)
       style-to-object: 1.0.8
+      svelte: 5.18.0
+
+  svelte-vertical-timeline@2.0.0(svelte@5.18.0):
+    dependencies:
       svelte: 5.18.0
 
   svelte@5.18.0:
