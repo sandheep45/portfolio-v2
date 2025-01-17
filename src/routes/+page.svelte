@@ -2,10 +2,24 @@
 	import ActivityBar from '$lib/components/layouts/portfolio-layout/activity-bar.svelte';
 	import MenuBar from '$lib/components/layouts/portfolio-layout/menu-bar.svelte';
 	import StatusBar from '$lib/components/layouts/portfolio-layout/status-bar.svelte';
+	import Html5 from '$lib/components/svgs/html5.svelte';
 	import * as Resizable from '$lib/components/ui/resizable/index';
 	import * as TreeView from '$lib/components/ui/tree-view';
 
 	let showSidebar = $state(true);
+
+	const sidebar = [
+		{
+			folderName: 'About',
+			files: [
+				{
+					fileName: 'index.html',
+					icon: Html5,
+					href: '/'
+				}
+			]
+		}
+	];
 
 	const toggleSidebar = () => (showSidebar = !showSidebar);
 </script>
@@ -28,12 +42,17 @@
 					<div class="h-full">
 						<TreeView.Root>
 							<TreeView.Folder name="src">
-								<TreeView.Folder name="routes">
-									<TreeView.File name="+layout.svelte" />
-									<TreeView.File name="+page.svelte" />
-								</TreeView.Folder>
-								<TreeView.File name="app.css" />
-								<TreeView.File name="hooks.server.ts" />
+								{#each sidebar as folder}
+									<TreeView.Folder name={folder.folderName}>
+										{#each folder.files as file}
+											<a href={file.href}>
+												<TreeView.File name={file.fileName}>
+													<file.icon class="h-5 w-5" />
+												</TreeView.File>
+											</a>
+										{/each}
+									</TreeView.Folder>
+								{/each}
 							</TreeView.Folder>
 						</TreeView.Root>
 					</div>

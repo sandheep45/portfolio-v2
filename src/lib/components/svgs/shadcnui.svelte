@@ -1,0 +1,19 @@
+<script lang="ts" module>
+	import { type SVGAttributes } from 'svelte/elements';
+	export type SvgProps = SVGAttributes<SVGElement>;
+</script>
+
+<script lang="ts">
+	let props: SvgProps = $props();
+</script>
+
+<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 100 100" {...props}
+	><g
+		stroke="#000"
+		stroke-linecap="round"
+		stroke-linejoin="round"
+		stroke-width="6.25"
+		clip-path="url(#a)"><path d="M81.25 50 50 81.25m25-65.625L15.625 75" /></g
+	><defs><clipPath id="a"><path fill="#fff" d="M0 0h100v100H0z" /></clipPath></defs></svg
+>
+

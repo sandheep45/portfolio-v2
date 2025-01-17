@@ -9,12 +9,14 @@
 		icon?: Snippet<[{ name: string }]>;
 	}
 
-	let { name, icon, type = 'button', class: className, ...rest }: Props = $props();
+	let { name, icon, type = 'button', class: className, children, ...rest }: Props = $props();
 </script>
 
 <button {type} class={cn('flex place-items-center gap-1 pl-[3px]', className)} {...rest}>
 	{#if icon}
 		{@render icon({ name })}
+	{:else if children}
+		{@render children()}
 	{:else}
 		<File class="size-4" />
 	{/if}
