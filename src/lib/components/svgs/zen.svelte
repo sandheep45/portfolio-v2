@@ -7,7 +7,7 @@
 	let props: SvgProps = $props();
 </script>
 
-<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 100 100" {...props}
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" {...props}
 	><rect width="1024" height="1024" rx="225" ry="225" fill="#202020" /><circle
 		cx="512"
 		cy="512"
@@ -24,4 +24,3 @@
 		stroke="#f2f0e3"
 	/></svg
 >
-

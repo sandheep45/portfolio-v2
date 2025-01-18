@@ -7,7 +7,7 @@
 	let props: SvgProps = $props();
 </script>
 
-<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 100 100" {...props}
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="296 110 2176 2554" {...props}
 	><linearGradient id="a" y1="51%" y2="51%"
 		><stop offset=".4" stop-color="#f50" /><stop offset=".6" stop-color="#ff2000" /></linearGradient
 	><linearGradient id="b" x1="2%" y1="51%" y2="51%"
@@ -26,4 +26,3 @@
 		d="m1999 363-224-253H992L769 363s-196-53-288 37c0 0 260-23 350 123l276 47c32 0 103-27 168-50 65-20 110-22 110-22s44 0 110 22 136 50 168 50c33 0 275-47 275-47 90-146 350-123 350-123-92-92-288-38-288-38"
 	/></svg
 >
-

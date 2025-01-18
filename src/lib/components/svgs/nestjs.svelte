@@ -7,7 +7,7 @@
 	let props: SvgProps = $props();
 </script>
 
-<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 100 100" {...props}
+<svg xmlns="http://www.w3.org/2000/svg" fill="none" {...props}
 	><path
 		fill="#E0234E"
 		fill-rule="evenodd"
@@ -15,4 +15,3 @@
 		clip-rule="evenodd"
 	/></svg
 >
-

@@ -1,4 +1,13 @@
-<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 100 100"
+<script lang="ts" module>
+	import { type SVGAttributes } from 'svelte/elements';
+	export type SvgProps = SVGAttributes<SVGElement>;
+</script>
+
+<script lang="ts">
+	let props: SvgProps = $props();
+</script>
+
+<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 100 100" {...props}
 	><path
 		fill="#61DAFB"
 		d="M50.307 58.817a8.816 8.816 0 1 0 0-17.632 8.816 8.816 0 0 0 0 17.632"
@@ -16,4 +25,3 @@
 		d="M34.664 40.97c-13.063 22.626-16.65 45.011-8.01 50 8.638 4.987 26.232-9.312 39.295-31.938 13.064-22.627 16.65-45.012 8.01-50-8.638-4.988-26.232 9.31-39.295 31.937Z"
 	/></svg
 >
-
