@@ -5,12 +5,10 @@
 	import FolderCode from '$lib/components/svgs/folder-code.svelte';
 	import * as Resizable from '$lib/components/ui/resizable/index';
 	import * as TreeView from '$lib/components/ui/tree-view';
-
 	import { knowMe, knowMyProjects, getInTouch, knowMeBetter } from './constants';
-	let { children } = $props();
 
+	const { children } = $props();
 	let showSidebar = $state(true);
-
 	const sidebarData = [knowMe, knowMyProjects, getInTouch, knowMeBetter];
 
 	const toggleSidebar = () => (showSidebar = !showSidebar);
@@ -25,18 +23,18 @@
 				<Resizable.Pane defaultSize={1 / 7} order={1}>
 					<div class="h-full p-3">
 						<TreeView.Root>
-							<TreeView.Folder name="src">
+							<TreeView.Folder class="font-poiretOne" name="src">
 								{#snippet icon()}
 									<FolderCode height={18} width={18} />
 								{/snippet}
 								{#each sidebarData as folder}
-									<TreeView.Folder name={folder.folderName}>
+									<TreeView.Folder class="font-poiretOne" name={folder.folderName}>
 										{#snippet icon()}
 											<folder.icon height={18} width={18} />
 										{/snippet}
 										{#each folder.files as file}
 											<a href={file.href}>
-												<TreeView.File name={file.fileName}>
+												<TreeView.File class="font-nova" name={file.fileName}>
 													{#snippet icon()}
 														<file.icon height={18} width={18} class="h-4 w-4" />
 													{/snippet}

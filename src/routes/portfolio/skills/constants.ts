@@ -54,8 +54,10 @@ import Swagger from '$lib/components/svgs/swagger.svelte';
 import T3Light from '$lib/components/svgs/t3-light.svelte';
 import Tailwindcss from '$lib/components/svgs/tailwindcss.svelte';
 import Tanstack from '$lib/components/svgs/tanstack.svelte';
-import Typescript from '$lib/components/svgs/typescript.svelte';
+import Typescript2 from '$lib/components/svgs/typescript2.svelte';
 import Ubuntu from '$lib/components/svgs/ubuntu.svelte';
+import Vitejs from '$lib/components/svgs/vitejs.svelte';
+import Vitest from '$lib/components/svgs/vitest.svelte';
 import Vscode from '$lib/components/svgs/vscode.svelte';
 import Vuejs from '$lib/components/svgs/vuejs.svelte';
 import Yarn from '$lib/components/svgs/yarn.svelte';
@@ -85,7 +87,7 @@ const languageSkill: SkillListType = {
 		},
 		{
 			name: 'Typescript',
-			icon: Typescript
+			icon: Typescript2
 		},
 		{
 			name: 'Python',
@@ -187,6 +189,7 @@ const backendSkill: SkillListType = {
 const packageSkills: SkillListType = {
 	optionCategory: 'Packages',
 	options: [
+		{ name: 'Vite', icon: Vitejs },
 		{
 			name: 'Shadcn UI',
 			icon: Shadcnui
@@ -202,6 +205,10 @@ const packageSkills: SkillListType = {
 		{
 			name: 'Zod',
 			icon: Zod
+		},
+		{
+			name: 'Vitest',
+			icon: Vitest
 		},
 		{
 			name: 'Tanstack Table',

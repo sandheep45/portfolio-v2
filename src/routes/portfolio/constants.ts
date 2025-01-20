@@ -8,7 +8,7 @@ import FolderGithub from '$lib/components/svgs/folder-github.svelte';
 import FolderShare from '$lib/components/svgs/folder-share.svelte';
 import Gmail from '$lib/components/svgs/gmail.svelte';
 import FolderMessage from '$lib/components/svgs/folder-message.svelte';
-import Vitejs from '$lib/components/svgs/vitejs.svelte';
+import DevTo from '$lib/components/svgs/dev-to.svelte';
 
 type SideBarFileDataType = {
 	fileName: string;
@@ -81,7 +81,7 @@ export const knowMeBetter: SideBarFolderDataType = {
 	files: [
 		{
 			fileName: 'Blogs.tsx',
-			icon: Vitejs,
+			icon: DevTo,
 			href: '/portfolio/blogs'
 		}
 	]

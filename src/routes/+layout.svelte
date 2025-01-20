@@ -12,6 +12,12 @@
 		name="description"
 		content="Hi, I'm Sandheep Kumar, a Full Stack and Mobile Developer with a deep passion for Linux, DevOps, and Automation. I specialize in creating scalable web and mobile applications, and I'm always exploring new technologies to improve my skills and streamline development processes."
 	/>
+	<link rel="preconnect" href="https://fonts.googleapis.com" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
+	<link
+		href="https://fonts.googleapis.com/css2?family=Borel&family=Iceland&family=Nova+Round&family=Poiret+One&display=swap"
+		rel="stylesheet"
+	/>
 </svelte:head>
 
 <ModeWatcher defaultMode="dark" />

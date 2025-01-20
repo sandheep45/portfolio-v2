@@ -71,46 +71,57 @@
 	];
 </script>
 
-<ScrollArea class="h-[calc(100dvh-100px)] w-full">
-	<Timeline position="alternate">
-		{#each experienceTimeLine as timeline, index}
-			<TimelineItem>
-				<TimelineOppositeContent
-					style="height: 150px; display: flex; justify-content: center; align-items: center; flex-direction: column;"
-					slot="opposite-content"
-				>
-					<p>{timeline.timeline}</p>
-				</TimelineOppositeContent>
-				<TimelineSeparator>
-					<TimelineDot
-						style={'width: 100px; height: 100px; background-color: #000; display: flex; justify-content: center; align-items: center; border-color: transparent; '}
+<div class="flex w-full flex-col gap-6 py-7">
+	<div class="flex flex-col items-center justify-center gap-3">
+		<h1 class="text-5xl font-black text-[#008dce]">Work Experience</h1>
+		<h3 class="text-xl font-medium text-[#d800ca]">Interships and Fulltime</h3>
+	</div>
+	<ScrollArea class="h-[calc(100dvh-260px)] w-full">
+		<Timeline position="alternate">
+			{#each experienceTimeLine as timeline, index}
+				<TimelineItem>
+					<TimelineOppositeContent
+						style="height: 150px; display: flex; justify-content: center; align-items: center; flex-direction: column;"
+						slot="opposite-content"
 					>
-						<img
-							class={timeline.class}
-							src={timeline.companyLogo}
-							alt={timeline.descpription.companyName}
-						/>
-					</TimelineDot>
-					{#if index + 1 !== experienceTimeLine.length}
-						<TimelineConnector />
-					{/if}
-				</TimelineSeparator>
-				<TimelineContent
-					style={'height: 150px; display: flex; align-items: center; justify-content: center;'}
-				>
-					<div class="flex h-4/5 w-4/5 flex-col items-center justify-center rounded-md">
-						<h3>{timeline.descpription.jobTitle}</h3>
-						<p>{timeline.descpription.companyName}</p>
-					</div>
-				</TimelineContent>
-			</TimelineItem>
-		{/each}
-	</Timeline>
-</ScrollArea>
+						<p class="font-nova">{timeline.timeline}</p>
+					</TimelineOppositeContent>
+					<TimelineSeparator>
+						<TimelineDot
+							style={'width: 100px; height: 100px; background-color: #000; display: flex; justify-content: center; align-items: center; border-color: transparent; '}
+						>
+							<img
+								class={timeline.class}
+								src={timeline.companyLogo}
+								alt={timeline.descpription.companyName}
+							/>
+						</TimelineDot>
+						{#if index + 1 !== experienceTimeLine.length}
+							<TimelineConnector />
+						{/if}
+					</TimelineSeparator>
+					<TimelineContent
+						style={'height: 150px; display: flex; align-items: center; justify-content: center;'}
+					>
+						<div
+							class="flex h-4/5 w-4/5 flex-col items-center justify-center rounded-md bg-[#1f9aff]"
+						>
+							<h3 class="font-iceland text-xl font-semibold text-[#030d22]">
+								{timeline.descpription.jobTitle}
+							</h3>
+							<p class="font-nova text-lg font-medium text-[#ffd400]">
+								{timeline.descpription.companyName}
+							</p>
+						</div>
+					</TimelineContent>
+				</TimelineItem>
+			{/each}
+		</Timeline>
+	</ScrollArea>
+</div>
 
 <style>
 	p {
 		margin: px 0;
-		color: grey;
 	}
 </style>
