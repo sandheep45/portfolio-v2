@@ -9,6 +9,7 @@ import FolderShare from '$lib/components/svgs/folder-share.svelte';
 import Gmail from '$lib/components/svgs/gmail.svelte';
 import FolderMessage from '$lib/components/svgs/folder-message.svelte';
 import DevTo from '$lib/components/svgs/dev-to.svelte';
+import Reactjs from '$lib/components/svgs/reactjs.svelte';
 
 type SideBarFileDataType = {
 	fileName: string;
@@ -56,9 +57,39 @@ export const knowMyProjects: SideBarFolderDataType = {
 	icon: FolderGithub,
 	files: [
 		{
-			fileName: 'index.html',
-			icon: Html5,
-			href: '/portfolio/projects/1'
+			fileName: 'portfolio-v1.tsx',
+			icon: Reactjs,
+			href: '/portfolio/projects/portfolio-v1'
+		},
+		{
+			fileName: 'code-editor.tsx',
+			icon: Reactjs,
+			href: '/portfolio/projects/code-editor'
+		},
+		{
+			fileName: 'code-compiler.tsx',
+			icon: Reactjs,
+			href: '/portfolio/projects/code-compiler'
+		},
+		{
+			fileName: 'expense-tracker.tsx',
+			icon: Reactjs,
+			href: '/portfolio/projects/expense-tracker'
+		},
+		{
+			fileName: 'voice-search-news-app.tsx',
+			icon: Reactjs,
+			href: '/portfolio/projects/news-app'
+		},
+		{
+			fileName: 'google-keep-clone.tsx',
+			icon: Reactjs,
+			href: '/portfolio/projects/google-keep'
+		},
+		{
+			fileName: 'todo.tsx',
+			icon: Reactjs,
+			href: '/portfolio/projects/todo'
 		}
 	]
 };

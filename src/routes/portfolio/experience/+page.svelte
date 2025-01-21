@@ -72,9 +72,9 @@
 </script>
 
 <div class="flex w-full flex-col gap-6 py-7">
-	<div class="flex flex-col items-center justify-center gap-3">
-		<h1 class="text-5xl font-black text-[#008dce]">Work Experience</h1>
-		<h3 class="text-xl font-medium text-[#d800ca]">Interships and Fulltime</h3>
+	<div class="flex flex-col items-center justify-center gap-2">
+		<h1 class="font-iceland text-5xl font-black text-[#008dce]">Work Experience</h1>
+		<h3 class="font-poiretOne text-xl font-medium text-[#d800ca]">Interships and Fulltime</h3>
 	</div>
 	<ScrollArea class="h-[calc(100dvh-260px)] w-full">
 		<Timeline position="alternate">

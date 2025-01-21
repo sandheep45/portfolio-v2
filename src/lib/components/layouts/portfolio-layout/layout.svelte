@@ -1,4 +1,5 @@
 <script lang="ts">
+	import Device from 'svelte-device-info';
 	import ActivityBar from '$lib/components/layouts/portfolio-layout/activity-bar.svelte';
 	import MenuBar from '$lib/components/layouts/portfolio-layout/menu-bar.svelte';
 	import StatusBar from '$lib/components/layouts/portfolio-layout/status-bar.svelte';
@@ -8,6 +9,7 @@
 	import { knowMe, knowMyProjects, getInTouch, knowMeBetter } from './constants';
 
 	const { children } = $props();
+	const isSmallScreen = Device.isMobile || Device.isPhone;
 	let showSidebar = $state(true);
 	const sidebarData = [knowMe, knowMyProjects, getInTouch, knowMeBetter];
 
@@ -20,7 +22,7 @@
 		<ActivityBar {toggleSidebar} />
 		<Resizable.PaneGroup class="h-full bg-[#030d22]" direction="horizontal">
 			{#if showSidebar}
-				<Resizable.Pane defaultSize={1 / 7} order={1}>
+				<Resizable.Pane defaultSize={isSmallScreen ? 7 / 7 : 1 / 7} order={1}>
 					<div class="h-full p-3">
 						<TreeView.Root>
 							<TreeView.Folder class="font-poiretOne" name="src">
@@ -34,7 +36,7 @@
 										{/snippet}
 										{#each folder.files as file}
 											<a href={file.href}>
-												<TreeView.File class="font-nova" name={file.fileName}>
+												<TreeView.File class="truncate font-nova" name={file.fileName}>
 													{#snippet icon()}
 														<file.icon height={18} width={18} class="h-4 w-4" />
 													{/snippet}
@@ -49,7 +51,7 @@
 				</Resizable.Pane>
 			{/if}
 			<Resizable.Handle />
-			<Resizable.Pane defaultSize={6 / 7} order={2}>
+			<Resizable.Pane defaultSize={isSmallScreen ? 0 / 7 : 6 / 7} order={2}>
 				<div class="h-full p-3">
 					{@render children()}
 				</div>

@@ -1,39 +1,44 @@
 <script lang="ts">
+	import BugFix from '$lib/components/svgs/bug-fix.svelte';
 	import DevTo from '$lib/components/svgs/dev-to.svelte';
 	import GithubLight from '$lib/components/svgs/github-light.svelte';
+	import HashTag from '$lib/components/svgs/hash-tag.svelte';
 	import Linkedin from '$lib/components/svgs/linkedin.svelte';
+	import Projector from '$lib/components/svgs/projector.svelte';
 	import ScrollArea from '$lib/components/ui/scroll-area/scroll-area.svelte';
 
 	const startList = [
 		{
 			title: 'Skills ...',
-			icon: '',
+			icon: BugFix,
 			href: '/portfolio/skills'
 		},
 		{
 			title: 'Projects ...',
-			icon: '',
+			icon: Projector,
 			href: '/portfolio/projects'
 		},
 		{
 			title: 'Blogs ...',
-			icon: '',
+			icon: DevTo,
 			href: '/portfolio/blogs'
 		},
 		{
 			title: 'Git In Touch ...',
-			icon: '',
+			icon: HashTag,
 			href: '/portfolio/contact-me'
 		}
 	];
 </script>
 
-<ScrollArea class="h-full w-full">
+<ScrollArea class="h-full w-full py-4">
 	<div class="flex h-full w-full items-center justify-center">
-		<div class="mx-auto w-4/6 space-y-9">
+		<div class="mx-auto space-y-9 md:w-4/6">
 			<div class="flex flex-col gap-2">
-				<h1 class="font-borel text-4xl font-bold text-[#004696]">Sandheep Kumar</h1>
-				<p class="font-iceland text-lg text-[#f3f3f3]">
+				<h1 class="relative top-4 py-1 font-borel text-2xl font-bold text-[#004696] md:text-4xl">
+					Sandheep Kumar
+				</h1>
+				<p class="font-iceland text-xl leading-5 text-[#f3f3f3] md:text-lg">
 					Software Developement Engineer/ Linux Nerd/ Cook/ Sayar
 				</p>
 				<p class="font-poiretOne text-[#0ab2fa]">
@@ -50,18 +55,21 @@
 				</p>
 			</div>
 
-			<div class="flex w-full justify-between">
-				<div class="flex w-full flex-col gap-4">
-					<h2 class="font-nova text-2xl font-medium">Start</h2>
+			<div class="flex w-full flex-col justify-between gap-5 md:flex-row md:gap-0">
+				<div class="flex w-full flex-col gap-2 md:gap-4">
+					<h2 class="font-nova text-xl font-medium md:text-2xl">Start</h2>
 					<div class="flex w-full flex-col gap-2">
 						{#each startList as start}
-							<a class="font-borel text-sm text-blue-500" href={start.href}>{start.title}</a>
+							<div class="flex items-center gap-2 text-blue-500 underline underline-offset-4">
+								<start.icon height="20" width="20" />
+								<a class="font-borel text-sm" href={start.href}>{start.title}</a>
+							</div>
 						{/each}
 					</div>
 				</div>
 
-				<div class="flex w-full flex-col gap-4">
-					<h2 class="font-nova text-2xl font-medium">Profesionally Social Links</h2>
+				<div class="flex w-full flex-col gap-2 md:gap-4">
+					<h2 class="font-nova text-xl font-medium md:text-2xl">Profesionally Social Links</h2>
 					<a
 						href="https://www.linkedin.com/in/sandheep-kumar-patro-b39089183/"
 						target="_blank"
