@@ -7,12 +7,11 @@
 		<span class="px-1">
 			<Neovim class="h-4 w-4" />
 		</span>
-		<a href="/">About</a>
-		<a href="/">Experience</a>
-		<a href="/">Skills</a>
-		<a href="/">Projects</a>
-		<a href="/">Contact</a>
-		<a href="/">Hobbies</a>
+		<a href="/portfolio">About</a>
+		<a href="/portfolio/experience">Experience</a>
+		<a href="/portfolio/skills">Skills</a>
+		<a href="/portfolio/projects">Projects</a>
+		<a href="/portfolio/contact-me">Contact</a>
 	</div>
 
 	<div class="flex items-center gap-2">

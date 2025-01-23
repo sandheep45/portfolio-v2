@@ -24,7 +24,7 @@
 			<p class="text-[#d800ca]">
 				You can contact me with any questions, suggestions or just to say hi. I am always open to
 				new ideas and collaborations. It can be anything like collaborating on good projects or
-				startups or anime or gaming or anything else.
+				startups or sayari or anything else.
 			</p>
 		</div>
 

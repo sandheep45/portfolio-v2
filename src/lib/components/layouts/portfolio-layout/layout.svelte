@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { afterNavigate } from '$app/navigation';
 	import Device from 'svelte-device-info';
 	import ActivityBar from '$lib/components/layouts/portfolio-layout/activity-bar.svelte';
 	import MenuBar from '$lib/components/layouts/portfolio-layout/menu-bar.svelte';
@@ -14,6 +15,12 @@
 	const sidebarData = [knowMe, knowMyProjects, getInTouch, knowMeBetter];
 
 	const toggleSidebar = () => (showSidebar = !showSidebar);
+
+	afterNavigate(() => {
+		if (isSmallScreen) {
+			showSidebar = false;
+		}
+	});
 </script>
 
 <div class="flex h-dvh flex-col">

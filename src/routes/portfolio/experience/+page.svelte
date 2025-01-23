@@ -88,7 +88,7 @@
 					</TimelineOppositeContent>
 					<TimelineSeparator>
 						<TimelineDot
-							style={'width: 100px; height: 100px; background-color: #000; display: flex; justify-content: center; align-items: center; border-color: transparent; '}
+							style={`width: 100px; height: 100px; background-color: #000; display: flex; justify-content: center; align-items: center; border-color: transparent; `}
 						>
 							<img
 								class={timeline.class}

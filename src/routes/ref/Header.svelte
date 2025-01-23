@@ -1,13 +1,13 @@
 <script lang="ts">
 	import { page } from '$app/state';
-	import logo from '$lib/images/svelte-logo.svg';
-	import github from '$lib/images/github.svg';
+	// import logo from '$lib/images/svelte-logo.svg';
+	// import github from '$lib/images/github.svg';
 </script>
 
 <header>
 	<div class="corner">
 		<a href="https://svelte.dev/docs/kit">
-			<img src={logo} alt="SvelteKit" />
+			<!-- <img src={logo} alt="SvelteKit" /> -->
 		</a>
 	</div>
 
@@ -33,7 +33,7 @@
 
 	<div class="corner">
 		<a href="https://github.com/sveltejs/kit">
-			<img src={github} alt="GitHub" />
+			<!-- <img src={github} alt="GitHub" /> -->
 		</a>
 	</div>
 </header>
@@ -57,11 +57,11 @@
 		height: 100%;
 	}
 
-	.corner img {
-		width: 2em;
-		height: 2em;
-		object-fit: contain;
-	}
+	/* .corner img { */
+	/* 	width: 2em; */
+	/* 	height: 2em; */
+	/* 	object-fit: contain; */
+	/* } */
 
 	nav {
 		display: flex;

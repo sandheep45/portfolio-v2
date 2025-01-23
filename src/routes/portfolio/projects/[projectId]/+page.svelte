@@ -10,7 +10,7 @@
 <ScrollArea class="h-[calc(100dvh-100px)] w-full">
 	<div
 		style:background-image="url({data.image})"
-		class="flex h-full w-full flex-col gap-2 rounded-lg bg-cover bg-center bg-no-repeat p-5"
+		class="flex h-full w-full flex-col gap-2 rounded-lg bg-cover bg-center bg-no-repeat md:p-5"
 	>
 		<div class="mx-auto flex flex-col gap-5 rounded-lg bg-slate-800 px-5 py-9 md:w-4/5">
 			<a
@@ -38,7 +38,7 @@
 			</div>
 		</div>
 
-		<div class="grid-col-1 grid gap-5 md:grid-cols-3">
+		<div class="grid-col-1 grid gap-5 px-3 md:grid-cols-3 md:px-0">
 			{#each data.snapshots || [] as snapshot, index}
 				<Dialog.Root>
 					<Dialog.Trigger>
