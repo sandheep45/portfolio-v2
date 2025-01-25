@@ -15,7 +15,9 @@
 	});
 </script>
 
-<div class="flex items-center justify-between bg-[#0a0631] px-2 py-1 text-[#4d8bee]">
+<div
+	class="flex flex-col items-center justify-between gap-2 bg-[#0a0631] px-2 py-1 text-[#4d8bee] md:flex-row"
+>
 	<div class="flex items-center gap-3">
 		<p>Made with</p>
 		<Sveltejs height={20} width={20} />
