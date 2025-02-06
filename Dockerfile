@@ -7,17 +7,17 @@ WORKDIR /app
 # Install pnpm globally
 RUN npm install -g pnpm
 
-# Copy only package files for dependency installation
+# Copy package files to install dependencies
 COPY package.json pnpm-lock.yaml ./
 
-# Install dependencies
+# Install dependencies with pnpm
 RUN pnpm install --frozen-lockfile
 
 # Copy the rest of the source code
 COPY . .
 
-# Build the app for production
-RUN pnpm run build
+# Build the app for production with increased memory limit
+RUN node --max-old-space-size=4096 node_modules/.bin/pnpm run build
 
 
 # Stage 2: Run the application with a minimal image
@@ -26,7 +26,7 @@ FROM node:23-alpine AS runtime
 # Set the working directory
 WORKDIR /app
 
-# Copy only the build output and production dependencies
+# Copy build output and necessary files from the build stage
 COPY --from=build /app/build ./build
 COPY --from=build /app/package.json ./
 COPY --from=build /app/pnpm-lock.yaml ./

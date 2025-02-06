@@ -5,12 +5,24 @@ pipeline {
         IMAGE_NAME = 'portfolio-v2'
         IMAGE_TAG = 'latest'
         CONTAINER_NAME = 'portfolio-v2'
+        NODE_OPTIONS = '--max-old-space-size=4096'  // Increase memory limit
     }
 
     stages {
         stage('Checkout') {
             steps {
                 checkout scm
+            }
+        }
+
+        stage('Build Application') {
+            steps {
+                script {
+                    sh 'npm install -g pnpm'
+                    sh 'pnpm install --frozen-lockfile'
+                    // Build with increased memory limit
+                    sh 'pnpm run build'
+                }
             }
         }
 
@@ -40,17 +52,9 @@ pipeline {
     }
 
     post {
-        success {
-            echo 'Docker image built and container running locally!'
-        }
-        failure {
-            echo 'Something went wrong with the build or run process.'
-        }
         always {
-            script {
-                echo 'Cleaning up unused Docker resources...'
-                sh 'docker system prune -f'
-            }
+            echo 'Cleaning up unused Docker resources...'
+            sh 'docker system prune -f'
         }
     }
 }
