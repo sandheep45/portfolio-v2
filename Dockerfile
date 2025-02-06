@@ -17,7 +17,8 @@ RUN pnpm install --frozen-lockfile
 COPY . .
 
 # Build the app for production with increased memory limit
-RUN node --max-old-space-size=4096 node_modules/.bin/pnpm run build
+RUN NODE_OPTIONS=--max-old-space-size=4096 pnpm run build
+# RUN node --max-old-space-size=4096 node_modules/.bin/pnpm run build
 
 
 # Stage 2: Run the application with a minimal image
