@@ -14,16 +14,6 @@ pipeline {
             }
         }
 
-        stage('Build Application') {
-            steps {
-                script {
-                    sh 'npm install -g pnpm'
-                    sh 'pnpm install --frozen-lockfile'
-                    sh 'pnpm run build'
-                }
-            }
-        }
-
         stage('Build Docker Image') {
             steps {
                 script {
