@@ -1,3 +1,8 @@
+```bash
+docker build -t portfolio-v2 .
+docker run -d -p 3000:3000 --name portfolio portfolio-v2:latest
+```
+
 # sv
 
 Everything you need to build a Svelte project, powered by [`sv`](https://github.com/sveltejs/cli).
