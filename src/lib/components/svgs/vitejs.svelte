@@ -1,5 +1,5 @@
 <script lang="ts" module>
-	import { type SVGAttributes } from 'svelte/elements';
+	import type { SVGAttributes } from 'svelte/elements';
 	export type SvgProps = SVGAttributes<SVGElement>;
 </script>
 
@@ -37,4 +37,3 @@
 		></defs
 	></svg
 >
-

@@ -1,5 +1,5 @@
 <script lang="ts" module>
-	import { type SVGAttributes } from 'svelte/elements';
+	import type { SVGAttributes } from 'svelte/elements';
 	export type SvgProps = SVGAttributes<SVGElement>;
 </script>
 
@@ -20,4 +20,3 @@
 		d="M49.99 95.225a4.83 4.83 0 0 0 3.423-1.418l22.59-22.587a4.837 4.837 0 0 0-.01-6.836 4.84 4.84 0 0 0-6.836-.01L49.99 83.54 8.235 41.786a4.84 4.84 0 0 0-6.845 6.845l45.178 45.176a4.82 4.82 0 0 0 3.422 1.418"
 	/></svg
 >
-
