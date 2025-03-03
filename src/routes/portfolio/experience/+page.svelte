@@ -12,40 +12,13 @@
 
 	const experienceTimeLine = [
 		{
-			companyLogo: 'https://creatospace.com/assets/Logo-a24e76e4.png',
-			timeline: 'Jul 2021 - Sep 2021',
-			class: 'rounded-full',
-			descpription: {
-				jobTitle: 'React Native Intern',
-				companyName: 'CreatoSpace'
-			}
-		},
-		{
-			companyLogo: 'https://i.ibb.co/6J6F1zY/the-entrepreneurship-network-cover.jpg',
-			timeline: 'Oct 2021 - Dec 2021',
-			class: 'rounded-full',
-			descpription: {
-				jobTitle: 'React Intern',
-				companyName: 'The Entrepreneurship Network (Ten)'
-			}
-		},
-		{
 			companyLogo:
-				'https://media.licdn.com/dms/image/v2/C510BAQGszYfsvJBnoA/company-logo_200_200/company-logo_200_200/0/1630599468318?e=2147483647&v=beta&t=zGpaha_NyVFvBNRXjVtbY2p-ozuQXdzZGnROnx9kNcI',
-			timeline: 'Feb 2022 - Jul 2022',
+				'https://cdn.prod.website-files.com/64e5baa2187bf4d05912b65d/64e5bd502e8d1b07d195a26f_wwwew.svg',
+			timeline: 'May 2023 - Present',
 			class: 'rounded-full',
 			descpription: {
-				jobTitle: 'React Intern',
-				companyName: 'Default'
-			}
-		},
-		{
-			companyLogo: 'https://caarya.in/assets/caarya_banner_light.svg',
-			class: 'h-10 w-20 rounded-full',
-			timeline: 'Aug 2022 - Oct 2022',
-			descpription: {
-				jobTitle: 'Frontend Intern',
-				companyName: 'Caarya'
+				jobTitle: 'Fullstack Developer',
+				companyName: 'Webknot Technologies'
 			}
 		},
 		{
@@ -59,13 +32,40 @@
 			}
 		},
 		{
+			companyLogo: 'https://caarya.in/assets/caarya_banner_light.svg',
+			class: 'h-10 w-20 rounded-full',
+			timeline: 'Aug 2022 - Oct 2022',
+			descpription: {
+				jobTitle: 'Frontend Intern',
+				companyName: 'Caarya'
+			}
+		},
+		{
 			companyLogo:
-				'https://cdn.prod.website-files.com/64e5baa2187bf4d05912b65d/64e5bd502e8d1b07d195a26f_wwwew.svg',
-			timeline: 'May 2023 - Present',
+				'https://media.licdn.com/dms/image/v2/C510BAQGszYfsvJBnoA/company-logo_200_200/company-logo_200_200/0/1630599468318?e=2147483647&v=beta&t=zGpaha_NyVFvBNRXjVtbY2p-ozuQXdzZGnROnx9kNcI',
+			timeline: 'Feb 2022 - Jul 2022',
 			class: 'rounded-full',
 			descpription: {
-				jobTitle: 'Fullstack Developer',
-				companyName: 'Webknot Technologies'
+				jobTitle: 'React Intern',
+				companyName: 'Default'
+			}
+		},
+		{
+			companyLogo: 'https://i.ibb.co/6J6F1zY/the-entrepreneurship-network-cover.jpg',
+			timeline: 'Oct 2021 - Dec 2021',
+			class: 'rounded-full',
+			descpription: {
+				jobTitle: 'React Intern',
+				companyName: 'The Entrepreneurship Network (Ten)'
+			}
+		},
+		{
+			companyLogo: 'https://creatospace.com/assets/Logo-a24e76e4.png',
+			timeline: 'Jul 2021 - Sep 2021',
+			class: 'rounded-full',
+			descpription: {
+				jobTitle: 'React Native Intern',
+				companyName: 'CreatoSpace'
 			}
 		}
 	];
