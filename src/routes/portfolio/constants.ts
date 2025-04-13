@@ -58,7 +58,7 @@ export const knowMyProjects: SideBarFolderDataType = {
 		{
 			fileName: 'index.html',
 			icon: Html5,
-			href: '/portfolio/projects/1'
+			href: '/portfolio/projects'
 		}
 	]
 };
