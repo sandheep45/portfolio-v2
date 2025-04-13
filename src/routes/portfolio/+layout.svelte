@@ -4,7 +4,12 @@
 	import FolderCode from '$lib/components/svgs/folder-code.svelte';
 	import * as Resizable from '$lib/components/ui/resizable/index';
 	import * as TreeView from '$lib/components/ui/tree-view';
-	import { knowMe, knowMyProjects, getInTouch, knowMeBetter } from './constants';
+	import {
+		knowMe,
+		knowMyProjects,
+		getInTouch,
+		knowMeBetter
+	} from '$lib/components/layouts/portfolio-layout/constants';
 
 	import { getShowSidebar, setShowSidebar } from '$lib/store/sidebar-store.svelte';
 
